@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/webora-logo.png";
+import logo from "@/assets/Webora-logo.png";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
