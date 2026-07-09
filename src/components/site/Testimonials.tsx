@@ -5,7 +5,7 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Codeva rebuilt our marketing site and product onboarding in 8 weeks. Conversion jumped 42%. They feel like an extension of our team.",
+      "Webora rebuilt our marketing site and product onboarding in 8 weeks. Conversion jumped 42%. They feel like an extension of our team.",
     name: "Maya Okafor",
     role: "Head of Growth, Northwind",
   },

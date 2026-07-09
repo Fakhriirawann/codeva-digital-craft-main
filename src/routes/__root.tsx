@@ -6,7 +6,7 @@ import { Preloader } from "@/components/site/Preloader";
 
 import appCss from "../styles.css?url";
 
-const themeScript = `(function(){try{var s=localStorage.getItem("codeva-theme");var d=s?s==="dark":matchMedia("(prefers-color-scheme: dark)").matches;var r=document.documentElement;if(d)r.classList.add("dark");r.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
+const themeScript = `(function(){try{var s=localStorage.getItem("webora-theme");var d=s?s==="dark":matchMedia("(prefers-color-scheme: dark)").matches;var r=document.documentElement;if(d)r.classList.add("dark");r.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
 
 function NotFoundComponent() {
   return (
@@ -29,17 +29,16 @@ function NotFoundComponent() {
     </div>
   );
 }
-
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Codeva Studio — Premium digital agency for web, apps & brand" },
-      { name: "description", content: "Codeva Studio is a digital agency crafting websites, mobile apps, UI/UX and brand identities for ambitious teams worldwide." },
-      { name: "author", content: "Codeva Studio" },
-      { property: "og:title", content: "Codeva Studio — Premium digital agency" },
-      { property: "og:description", content: "Websites, mobile apps, UI/UX and branding, engineered for performance and designed to last." },
+      { title: "Webora Studio — Premium digital agency for web, apps & brand" },
+      { name: "description", content: "Webora Studio is a digital agency crafting websites, mobile apps, UI/UX and brand identities for ambitious teams worldwide." },
+      { name: "author", content: "Webora Studio" },
+      { property: "og:title", content: "Webora Studio — Premium digital agency" },
+      { property: "og:description", content: "Webora Studio adalah digital agency..." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -49,13 +48,18 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
+      // Tambahkan baris kode favicon di bawah ini:
+      {
+        rel: "icon",
+        type: "image/png", // Ganti "image/x-icon" jika file Anda menggunakan format .ico
+        href: "/favicon.png", // Mengarah langsung ke file di folder public
+      },
     ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>

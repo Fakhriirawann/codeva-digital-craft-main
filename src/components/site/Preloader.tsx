@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import logo from "@/assets/codeva-logo.png";
+import logo from "@/assets/Webora-logo.png";
 
 export function Preloader() {
   const [done, setDone] = useState(false);
@@ -23,24 +23,26 @@ export function Preloader() {
           <div className="pointer-events-none absolute inset-0 bg-hero-gradient opacity-70" />
           <div className="pointer-events-none absolute inset-0 grain opacity-30" />
 
-          <div className="relative flex flex-col items-center gap-6">
+            <div className="relative flex flex-col items-center gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="relative"
             >
+              {/* Efek kilau/glow di belakang logo diperlebar mengikuti ukuran logo baru */}
               <motion.div
-                animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0, 0.5] }}
+                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
                 transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 rounded-full bg-accent/30 blur-2xl"
+                className="absolute inset-0 rounded-full bg-accent/30 blur-3xl"
               />
               <img
                 src={logo}
-                alt="Codeva Studio"
-                width={72}
-                height={72}
-                className="relative h-16 w-16 md:h-20 md:w-20 object-contain"
+                alt="Webora Studio"
+                width={160} // Diubah dari 72
+                height={160}
+                // Diperbesar menjadi h-28 di mobile dan md:h-40 di desktop
+                className="relative h-28 w-28 md:h-40 md:w-40 object-contain"
               />
             </motion.div>
 
@@ -50,12 +52,14 @@ export function Preloader() {
               transition={{ duration: 0.5, delay: 0.15 }}
               className="flex items-center gap-2"
             >
-              <span className="font-display text-base tracking-tight text-foreground">
-                Codeva <span className="text-muted-foreground font-normal">Studio</span>
+              {/* Teks dinaikkan menjadi text-3xl di mobile dan md:text-4xl di desktop */}
+              <span className="font-display text-3xl md:text-4xl tracking-tight text-foreground">
+                Webora <span className="text-muted-foreground font-normal">Studio</span>
               </span>
             </motion.div>
 
-            <div className="relative h-px w-40 overflow-hidden rounded-full bg-border">
+            {/* Garis loading bar diperlebar sedikit agar serasi dengan teks yang membesar */}
+            <div className="relative h-px w-52 overflow-hidden rounded-full bg-border">
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}

@@ -37,7 +37,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
-              Codeva Studio partners with founders and brands to ship beautiful websites,
+              Webora Studio partners with founders and brands to ship beautiful websites,
               mobile apps and identities — engineered for performance, designed to last.
             </motion.p>
             <motion.div

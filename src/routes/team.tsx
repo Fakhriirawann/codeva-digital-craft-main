@@ -17,8 +17,8 @@ export const Route = createFileRoute("/team")({
 });
 
 const team = [
-  { name: "Fakhri Irawan", role: "Co-founder, Engineering", initials: "FI", tone: "bg-accent/10 text-accent" },
-  { name: "M. Lutfi Kurniawan", role: "Co-founder, Engineering", initials: "LK", tone: "bg-violet-soft text-violet" },
+  { name: "Fakhri Irawan", role: "CEO | Founder, Engineering", initials: "FI", tone: "bg-accent/10 text-accent" },
+  { name: "M. Lutfi Kurniawan", role: "Co-Founder, Engineering", initials: "LK", tone: "bg-violet-soft text-violet" },
   { name: "Anandari Pramadhanty", role: "Lead Product Designer", initials: "AP", tone: "bg-accent/10 text-foreground" },
 ];
 

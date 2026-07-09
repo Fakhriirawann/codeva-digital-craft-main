@@ -3,7 +3,7 @@ import { Moon, Sun } from "lucide-react";
 
 type Theme = "light" | "dark";
 
-const STORAGE_KEY = "codeva-theme";
+const STORAGE_KEY = "webora-theme";
 
 function applyTheme(theme: Theme) {
   const root = document.documentElement;

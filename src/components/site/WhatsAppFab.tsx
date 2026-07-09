@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_NUMBER = "6282174464169";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Halo Codeva Studio! Saya tertarik untuk mendiskusikan project."
+  "Halo Webora Studio! Saya tertarik untuk mendiskusikan project."
 )}`;
 
 export function WhatsAppFab() {

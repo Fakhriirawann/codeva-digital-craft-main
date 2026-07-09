@@ -18,7 +18,7 @@ export function WhyUs() {
         <div className="max-w-2xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white/80">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Why Codeva
+            Why Webora
           </span>
           <Reveal>
             <h2 className="mt-4 text-3xl text-white text-balance md:text-5xl">

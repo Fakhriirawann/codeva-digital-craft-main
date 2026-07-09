@@ -10,11 +10,11 @@ export function Footer() {
           <div className="md:col-span-5">
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Codeva Studio is a digital agency crafting websites, mobile apps and brands for ambitious teams worldwide.
+              Webora Studio is a digital agency crafting websites, mobile apps and brands for ambitious teams worldwide.
             </p>
             <div className="mt-6 flex items-center gap-2">
               <a
-                href="https://www.instagram.com/codeva.studio"
+                href="https://www.instagram.com/Webora.studio"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -45,7 +45,7 @@ export function Footer() {
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground">Contact</h4>
               <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-                <li>codevaa.studio@gmail.com</li>
+                <li>Weboraa.studio@gmail.com</li>
                 <li>+(62) 821 7446 4169</li>
                 <li>Remote · Worldwide</li>
               </ul>
@@ -53,7 +53,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Codeva Studio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Webora Studio. All rights reserved.</p>
           <p className="flex items-center gap-2">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet animate-pulse" />
             Available for new projects
