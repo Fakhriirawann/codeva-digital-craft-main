@@ -2,14 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { CTA } from "@/components/site/CTA";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react"; // <-- Instagram sudah diimpor
 
 export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
-      { title: "Team — Codeva Studio" },
-      { name: "description", content: "Meet the senior designers and engineers behind Codeva Studio." },
-      { property: "og:title", content: "Team — Codeva Studio" },
+      { title: "Team — Webora Studio" },
+      { name: "description", content: "Meet the designers and engineers behind Webora Studio." },
+      { property: "og:title", content: "Team — Webora Studio" }, // <-- Diubah ke Webora
       { property: "og:description", content: "A small, senior team building digital products with craft." },
     ],
   }),
@@ -17,9 +17,9 @@ export const Route = createFileRoute("/team")({
 });
 
 const team = [
-  { name: "Fakhri Irawan", role: "CEO | Founder, Engineering", initials: "FI", tone: "bg-accent/10 text-accent" },
-  { name: "M. Lutfi Kurniawan", role: "Co-Founder, Engineering", initials: "LK", tone: "bg-violet-soft text-violet" },
-  { name: "Anandari Pramadhanty", role: "Lead Product Designer", initials: "AP", tone: "bg-accent/10 text-foreground" },
+  { name: "Fakhri Irawan", role: "CEO | Founder, Engineering", initials: "FI", tone: "bg-accent/10 text-accent", instagram: "https://www.instagram.com/fkhrwnn?igsh=N2R6N2ZpdHU4cGlu" },
+  { name: "M. Lutfi Kurniawan", role: "Co-Founder, Engineering", initials: "LK", tone: "bg-violet-soft text-violet", instagram: "https://www.instagram.com/lulutfii?igsh=MXdsdjFzeDUxM2RkaA==" },
+  { name: "Anandari Pramadhanty", role: "Lead Product Designer", initials: "AP", tone: "bg-accent/10 text-foreground", instagram: "https://www.instagram.com/anandrp_?igsh=emt6ODA2cGdrMXpq" },
 ];
 
 function TeamPage() {
@@ -50,8 +50,9 @@ function TeamPage() {
                     <a href="#" aria-label="LinkedIn" className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-accent hover:bg-ink hover:text-ink-foreground">
                       <Linkedin className="h-4 w-4" />
                     </a>
-                    <a href="#" aria-label="Twitter" className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-accent hover:bg-ink hover:text-ink-foreground">
-                      <Twitter className="h-4 w-4" />
+                    {/* 👇 Bagian ini sudah diubah dari Twitter menjadi Instagram 👇 */}
+                    <a href={m.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-accent hover:bg-ink hover:text-ink-foreground">
+                      <Instagram className="h-4 w-4" />
                     </a>
                   </div>
                 </article>
