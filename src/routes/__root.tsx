@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts, ScriptOnce } from 
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { ScrollToTop } from "@/components/site/ScrollToTop";
 import { Preloader } from "@/components/site/Preloader";
 
 import appCss from "../styles.css?url";
@@ -29,30 +30,29 @@ function NotFoundComponent() {
     </div>
   );
 }
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Webora Studio — Premium digital agency for web, apps & brand" },
+      { title: "Webora Studio — Premium Digital Agency for Web, Apps & Brand" },
       { name: "description", content: "Webora Studio is a digital agency crafting websites, mobile apps, UI/UX and brand identities for ambitious teams worldwide." },
       { name: "author", content: "Webora Studio" },
-      { property: "og:title", content: "Webora Studio — Premium digital agency" },
-      { property: "og:description", content: "Webora Studio adalah digital agency..." },
+      { property: "og:title", content: "Webora Studio — Premium Digital Agency" },
+      { property: "og:description", content: "Webora Studio crafts high-performance websites, mobile apps, and visual systems." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      // Tambahkan baris kode favicon di bawah ini:
       {
         rel: "icon",
-        type: "image/png", // Ganti "image/x-icon" jika file Anda menggunakan format .ico
-        href: "/favicon.png", // Mengarah langsung ke file di folder public
+        type: "image/png",
+        href: "/favicon.png",
       },
     ],
   }),
@@ -60,6 +60,7 @@ export const Route = createRootRoute({
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
+
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -85,6 +86,7 @@ function RootComponent() {
         </main>
         <Footer />
       </div>
+      <ScrollToTop />
       <WhatsAppFab />
       <Preloader />
     </>

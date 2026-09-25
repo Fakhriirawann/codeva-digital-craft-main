@@ -14,7 +14,7 @@ export function Footer() {
             </p>
             <div className="mt-6 flex items-center gap-2">
               <a
-                href="https://www.instagram.com/Webora.studio"
+                href="https://www.instagram.com/Weboraa.studio"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
